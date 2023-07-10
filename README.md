@@ -1,24 +1,35 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This repo mainly provides fake data for practicing N+1 queries operations.
 
-Things you may want to cover:
+## Prerequisite
 
-* Ruby version
+- [Ruby](https://www.ruby-lang.org/en/documentation/installation/)
+- [MySQL](https://dev.mysql.com/doc/mysql-installation-excerpt/5.7/en/)
 
-* System dependencies
+## Quick Start
 
-* Configuration
+1. clone this repo
 
-* Database creation
+   ```
+   git clone git@github.com:camel2243/rails_n_plus_1_queries_problem.git
+   ```
 
-* Database initialization
+2. install dependencies
+   ```
+   cd rails_n_plus_1_queries_problem
+   bundle install
+   ```
+   
+3. Setup database.yml
 
-* How to run the test suite
+   ```
+   vim config/database.yml
+   ```
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+4. Initial database and fake data
+   ```
+   rails db:create
+   rails db:migrate
+   rake db:seed
+   ```
